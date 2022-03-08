@@ -10,9 +10,7 @@ const Home: NextPage = () => {
         <title>Home | Tractian</title>
       </Head>
 
-      <Button>
-        Demonstração
-      </Button>
+      <Button>Demonstração</Button>
     </>
   );
 };

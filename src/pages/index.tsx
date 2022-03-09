@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import { Button, Header } from 'components';
+import { HomeTemplate } from 'templates/HomeTemplate';
 
 const Home: NextPage = () => {
   return (
@@ -10,7 +11,7 @@ const Home: NextPage = () => {
         <title>Home | Tractian</title>
       </Head>
 
-      <Button>Demonstração</Button>
+      <HomeTemplate />
     </>
   );
 };

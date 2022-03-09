@@ -19,5 +19,9 @@ declare module 'styled-components' {
       background_hover: string;
       text: string;
     };
+
+    spacing: {
+      max_width: string;
+    }
   }
 }

@@ -1,3 +1,5 @@
+import { spacing } from './spacing';
+
 export default {
   title: 'light',
 
@@ -16,4 +18,5 @@ export default {
     background_hover: '#e6e6ea',
     text: '#333',
   },
+  spacing,
 };

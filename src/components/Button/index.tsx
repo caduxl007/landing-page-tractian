@@ -5,6 +5,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
 }
 
-export function Button({ children }: ButtonProps) {
-  return <S.Container>{children}</S.Container>;
+export function Button({ children, ...rest }: ButtonProps) {
+  return <S.Container type="button" {...rest}>{children}</S.Container>;
 }

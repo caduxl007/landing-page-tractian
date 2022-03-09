@@ -1,9 +1,12 @@
+import { spacing } from './spacing';
+
+
 export default {
   title: 'dark',
 
   colors: {
     white: '#ffffff',
-    primary: '#2563eb',
+    primary: '#1f1f23',
     secundary: '#a970ff',
     green: '#22C55E',
 
@@ -16,4 +19,5 @@ export default {
     background_hover: '#26262c',
     text: '#fff',
   },
+  spacing,
 };

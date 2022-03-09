@@ -35,7 +35,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.colors.background_primary};
+    /* background-color: ${props => props.theme.colors.background_primary}; */
     scroll-behavior: smooth;
     height: auto;
     text-rendering: optimizeLegibility !important;

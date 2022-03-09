@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  width: 100%;
+  max-width: 100%;
+`;
+
+export const ContentSectionOne = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
 
   > div {
@@ -40,5 +43,15 @@ export const Container = styled.main`
         right: 0;
       }
     }
+  }
+`;
+
+export const ContentSectionTwo = styled.div`
+  background-color: ${({ theme }) => theme.colors.white};
+  padding: 8rem 0;
+
+  > section {
+    max-width: ${({ theme }) => theme.spacing.max_width};
+    margin: 0 auto;
   }
 `;

@@ -5,6 +5,7 @@ export const Container = styled.header`
   position: fixed;
   width: 100%;
   z-index: 999;
+  background-color: ${({ theme }) => theme.colors.primary};
 
   > div {
     align-items: center;

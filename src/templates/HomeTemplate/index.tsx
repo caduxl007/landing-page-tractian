@@ -1,5 +1,6 @@
-import { Button, Header, CardDetailProduct } from 'components';
 import Image from 'next/image';
+
+import { Button, Header, CardDetailProduct, CardBenefit } from 'components';
 
 import * as S from './styles';
 
@@ -42,6 +43,41 @@ export function HomeTemplate() {
           <CardDetailProduct />
         </section>
       </S.ContentSectionTwo>
+
+      <S.ContentBenefits>
+        <section>
+          <h2>
+            Confira as vantagens de escolher a <b>Tractian</b>!
+          </h2>
+
+          <div className="row1">
+            <CardBenefit
+              title="Manutenção Preditiva"
+              text="Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos."
+              className="box-down"
+
+            />
+
+            <CardBenefit
+              title="Monitoramento Online"
+              text="Sensor Tractian coleta dados de vibração, temperatura, horímetro e consumo de energia em tempo real."
+            />
+
+            <CardBenefit
+              title="Setup Instantâneo"
+              text="Solução Plug & Play, sem necessidade de WiFi industrial, comunicação via 3G/4G independente."
+              className="box-down"
+            />
+          </div>
+
+          <div className="row2">
+            <CardBenefit
+              title="CMMS Integrado"
+              text="Automatize processos, ordens de serviço e tenha total controle sobre seus ativos e equipe."
+            />
+          </div>
+        </section>
+      </S.ContentBenefits>
     </S.Container>
   );
 }

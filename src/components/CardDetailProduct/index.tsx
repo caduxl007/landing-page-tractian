@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import * as S from './styles';
 
+//TO-DO: Aplicar efeito espelho
+
 export function CardDetailProduct() {
   return (
     <S.Container>

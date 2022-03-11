@@ -17,7 +17,7 @@ export const Container = styled.header`
 
     &,
     a {
-      color: white;
+      color: ${({ theme }) => theme.colors.white};
     }
 
     nav {

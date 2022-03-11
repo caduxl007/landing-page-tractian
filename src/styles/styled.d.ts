@@ -21,7 +21,14 @@ declare module 'styled-components' {
     };
 
     spacing: {
+      small: string;
+      small_medium: string;
+      medium: string;
+      medium_large: string;
+      large: string;
+
       max_width: string;
-    }
+      padding_container_default: string;
+    };
   }
 }

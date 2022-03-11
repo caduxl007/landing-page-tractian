@@ -1,20 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 import {
   Button,
-  Header,
-  CardDetailProduct,
   CardBenefit,
+  CardDetailProduct,
   CardFeedback,
+  NavLink
 } from 'components';
-
+import Image from 'next/image';
 import * as S from './styles';
 
 export function HomeTemplate() {
   return (
     <S.Container>
-      <Header />
       <S.ContentSectionOne>
         <div>
           <section>
@@ -29,7 +25,10 @@ export function HomeTemplate() {
               <Button>Demonstração</Button>
 
               <p>
-                Já é cliente? <Link href="">Acesse aqui</Link>
+                Já é cliente?{' '}
+                <b>
+                  <NavLink href="">Acesse aqui</NavLink>
+                </b>
               </p>
             </div>
 

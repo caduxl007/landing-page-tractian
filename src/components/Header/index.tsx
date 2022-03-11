@@ -1,10 +1,7 @@
-import Image from 'next/image';
-
-import { Button } from 'components/Button';
+import { Button, NavLink } from 'components';
 import { useTheme } from 'hooks/useTheme';
-
-import * as S from './styles';
 import { NavButton } from './NavButton';
+import * as S from './styles';
 
 export function Header() {
   const { toggleTheme } = useTheme();
@@ -42,7 +39,7 @@ export function Header() {
           <NavButton>Materiais Gratuitos</NavButton>
         </nav>
         <div>
-          <a href="">Área do Cliente</a>
+          <NavLink href="asd">Área do Cliente</NavLink>
 
           <Button onClick={toggleTheme}>Demonstração</Button>
         </div>

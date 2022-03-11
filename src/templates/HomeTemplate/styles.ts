@@ -31,9 +31,6 @@ export const ContentSectionOne = styled.div`
           font-size: 1.8rem;
           line-height: 2.5rem;
           margin: 2rem 0;
-          a {
-            font-weight: bold;
-          }
         }
       }
 
@@ -48,7 +45,7 @@ export const ContentSectionOne = styled.div`
 
 export const ContentSectionTwo = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  padding: 8rem 2rem;
+  padding: ${({ theme }) => theme.spacing.padding_container_default};
 
   > section {
     max-width: ${({ theme }) => theme.spacing.max_width};
@@ -91,7 +88,8 @@ export const ContentBenefits = styled.div`
 
 export const ContentUsersFeedbacks = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
-  padding: 8rem 2rem;
+  padding: ${({ theme }) => theme.spacing.padding_container_default};
+
   > section {
     max-width: ${({ theme }) => theme.spacing.max_width};
     margin: 0 auto;

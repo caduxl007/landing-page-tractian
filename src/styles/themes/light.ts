@@ -1,13 +1,13 @@
 import { spacing } from './spacing';
+import { colors_default } from './colors-default';
 
 export default {
   title: 'light',
 
   colors: {
-    white: '#ffffff',
+    ...colors_default,
     primary: '#2563eb',
     secundary: '#1f1f23',
-    green: '#22C55E',
 
     background_line: '#0000001a',
 

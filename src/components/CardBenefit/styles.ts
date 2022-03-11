@@ -4,7 +4,7 @@ export const Container = styled.div`
   text-align: left;
   width: 34rem;
   height: 21rem;
-  border-top: 4px solid #03d8a9;
+  border-top: 4px solid ${({ theme }) => theme.colors.primary};
   border-radius: 8px;
   padding: 4rem 3rem;
   margin: 3rem;
@@ -17,6 +17,7 @@ export const Container = styled.div`
 
   h2 {
     font-size: 2rem;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   p {

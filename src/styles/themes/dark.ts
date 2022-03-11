@@ -7,7 +7,7 @@ export default {
   colors: {
     white: '#ffffff',
     primary: '#1f1f23',
-    secundary: '#a970ff',
+    secundary: '#2563eb',
     green: '#22C55E',
 
     background_line: '#ffffff1a',

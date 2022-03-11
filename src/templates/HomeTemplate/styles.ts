@@ -68,6 +68,7 @@ export const ContentBenefits = styled.div`
     > h2 {
       font-size: 4rem;
       font-weight: 400;
+      margin-bottom: 2rem;
       /* -webkit-box-reflect: below 0
         linear-gradient(transparent, rgb(0, 0, 0, 0.2)); */
     }
@@ -82,8 +83,32 @@ export const ContentBenefits = styled.div`
       &. */
 
       display: flex;
-        justify-content: center;
-        align-items: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+`;
+
+export const ContentUsersFeedbacks = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: 8rem 2rem;
+  > section {
+    max-width: ${({ theme }) => theme.spacing.max_width};
+    margin: 0 auto;
+
+    h2 {
+      color: ${({ theme }) => theme.colors.white};
+      font-size: 3.2rem;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    > div {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
     }
   }
 `;

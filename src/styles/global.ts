@@ -39,8 +39,9 @@ export default createGlobalStyle`
   }
 
   body {
-    /* background-color: ${props => props.theme.colors.background_primary}; */
     scroll-behavior: smooth;
+    background-color: #fff;
+
     height: auto;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;

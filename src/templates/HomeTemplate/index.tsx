@@ -3,6 +3,7 @@ import {
   CardBenefit,
   CardDetailProduct,
   CardFeedback,
+  FormContact,
   NavLink
 } from 'components';
 import Image from 'next/image';
@@ -125,6 +126,10 @@ export function HomeTemplate() {
           </div>
         </section>
       </S.ContentUsersFeedbacks>
+
+      <S.ContentForm>
+        <FormContact />
+      </S.ContentForm>
     </S.Container>
   );
 }

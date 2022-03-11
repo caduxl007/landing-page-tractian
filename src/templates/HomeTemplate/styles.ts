@@ -110,3 +110,7 @@ export const ContentUsersFeedbacks = styled.div`
     }
   }
 `;
+
+export const ContentForm = styled.div`
+  padding: ${({ theme }) => theme.spacing.padding_container_default};
+`;

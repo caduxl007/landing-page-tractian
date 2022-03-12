@@ -1,16 +1,16 @@
 import { CardInfoProductOperation } from 'components';
 import Image from 'next/image';
 import { useState } from 'react';
+import {
+  management,
+  monitoring
+} from 'utils/mocks/details-info-product-operation';
 import * as S from './styles';
-
-//TO-DO: Deixar tudo manual, criando constantes
 
 export function SectionCardsInfoProductOperation() {
   const [selectedNumber, setSelectedNumber] = useState(1);
   const [selectedTypeInfo, setSelectedTypeInfo] = useState('monitoring');
-  const [selectedImage, setSelectedImage] = useState(
-    'https://imgix.tractian.com/lp-sensor/enviamos-o-sensor.png?auto=format&fit=max&w=1080',
-  );
+  const [selectedImage, setSelectedImage] = useState(monitoring[0].image_url);
 
   function handleSelectCard(number: number, image: string) {
     setSelectedNumber(number);
@@ -22,13 +22,9 @@ export function SectionCardsInfoProductOperation() {
     setSelectedNumber(1);
 
     if (type === 'monitoring') {
-      setSelectedImage(
-        'https://imgix.tractian.com/lp-sensor/enviamos-o-sensor.png?auto=format&fit=max&w=1080',
-      );
+      setSelectedImage(monitoring[0].image_url);
     } else {
-      setSelectedImage(
-        'https://imgix.tractian.com/images/mobile-assets-tree.png?auto=format&fit=max&w=1200',
-      );
+      setSelectedImage(management[0].image_url);
     }
   }
 
@@ -57,59 +53,31 @@ export function SectionCardsInfoProductOperation() {
         <S.ContentCards>
           {selectedTypeInfo === 'monitoring' ? (
             <>
-              <CardInfoProductOperation
-                number={1}
-                title="Nós enviamos os sensores"
-                text="Fazemos a entrega pelos Correios para o Brasil todo. Você recebe o sensor na sua empresa. Não necessita passar pelo Wi-Fi industrial e nem falar com a TI."
-                selected_number={selectedNumber}
-                image_url="https://imgix.tractian.com/lp-sensor/enviamos-o-sensor.png?auto=format&fit=max&w=1080"
-                handleSelectCard={handleSelectCard}
-              />
-              <CardInfoProductOperation
-                number={2}
-                title="Nós enviamos os sensores"
-                text="Fazemos a entrega pelos Correios para o Brasil todo. Você recebe o sensor na sua empresa. Não necessita passar pelo Wi-Fi industrial e nem falar com a TI."
-                selected_number={selectedNumber}
-                image_url="https://imgix.tractian.com/images/monitored-asset.png?auto=format&fit=max&w=1080"
-                handleSelectCard={handleSelectCard}
-              />
-
-              <CardInfoProductOperation
-                number={3}
-                title="Nós enviamos os sensores"
-                text="Fazemos a entrega pelos Correios para o Brasil todo. Você recebe o sensor na sua empresa. Não necessita passar pelo Wi-Fi industrial e nem falar com a TI."
-                selected_number={selectedNumber}
-                image_url="https://imgix.tractian.com/images/get-insights.png?auto=format&fit=max&w=1080"
-                handleSelectCard={handleSelectCard}
-              />
+              {monitoring.map((data) => (
+                <CardInfoProductOperation
+                  key={data.id}
+                  number={data.id}
+                  title={data.title}
+                  text={data.text}
+                  selected_number={selectedNumber}
+                  image_url={data.image_url}
+                  handleSelectCard={handleSelectCard}
+                />
+              ))}
             </>
           ) : (
             <>
-              <CardInfoProductOperation
-                number={1}
-                title="Nos envie sua lista Ativos, Locais e Usuários"
-                text="Deixamos a plataforma pronta e organizada para você, preparando sua planta e seus ativos seguindo a disposição enviada para nós, bem como seus mantenedores cadastrados na plataforma."
-                selected_number={selectedNumber}
-                image_url="https://imgix.tractian.com/images/mobile-assets-tree.png?auto=format&fit=max&w=1200"
-                handleSelectCard={handleSelectCard}
-              />
-              <CardInfoProductOperation
-                number={2}
-                title="Automatize seus Planos e Ordens de Serviço"
-                text="Use procedimentos online para organizar checklists e inspeções. Sequenciar e planejar Ordens de Serviço preventivamente nunca foi tão fácil."
-                selected_number={selectedNumber}
-                image_url="https://imgix.tractian.com/images/automatic-os.png?auto=format&fit=max&w=1200"
-                handleSelectCard={handleSelectCard}
-              />
-
-              <CardInfoProductOperation
-                number={3}
-                title="Substitua o Excel por completo"
-                text="A plataforma vai abrir as Ordens de serviços e distribui-las conforme as automações configuradas, permitindo que toda a equipe de manutenção se preocupe apenas em executar suas atividades de rotina."
-                selected_number={selectedNumber}
-                image_url="https://imgix.tractian.com/images/replace-excell.png?auto=format&fit=max&w=1200"
-                handleSelectCard={handleSelectCard}
-              />
+              {management.map((data) => (
+                <CardInfoProductOperation
+                  key={data.id}
+                  number={data.id}
+                  title={data.title}
+                  text={data.text}
+                  selected_number={selectedNumber}
+                  image_url={data.image_url}
+                  handleSelectCard={handleSelectCard}
+                />
+              ))}
             </>
           )}
         </S.ContentCards>

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   text-align: left;
-  width: 34rem;
-  height: 21rem;
+  max-width: 34rem;
+  height: auto ;
+  /* height: 20rem; */
   border-top: 4px solid ${({ theme }) => theme.colors.primary};
   border-radius: 8px;
   padding: 4rem 3rem;
@@ -24,5 +25,14 @@ export const Container = styled.div`
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #444;
+  }
+
+  @media(max-width: 1000px) {
+    max-width: 60rem;
+  /* height: 20rem; */
+    
+    &.box-down {
+      top: 0;
+    }
   }
 `;

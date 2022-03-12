@@ -92,6 +92,10 @@ export const ContentBenefits = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: 1000px) {
+        flex-wrap: wrap;
+      }
     }
   }
 `;

@@ -4,7 +4,8 @@ import {
   CardDetailProduct,
   CardFeedback,
   FormContact,
-  NavLink
+  NavLink,
+  SectionCardsInfoProductOperation
 } from 'components';
 import Image from 'next/image';
 import * as S from './styles';
@@ -50,6 +51,10 @@ export function HomeTemplate() {
           <CardDetailProduct />
         </section>
       </S.ContentSectionTwo>
+
+      <S.ContentInfoProductOperation>
+        <SectionCardsInfoProductOperation />
+      </S.ContentInfoProductOperation>
 
       <S.ContentBenefits>
         <section>

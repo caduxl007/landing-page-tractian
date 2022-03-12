@@ -2,6 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   max-width: 100%;
+
+  > div {
+    > section {
+      max-width: ${({ theme }) => theme.spacing.max_width};
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const ContentSectionOne = styled.div`
@@ -46,6 +53,11 @@ export const ContentSectionOne = styled.div`
 export const ContentSectionTwo = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.spacing.padding_container_default};
+`;
+
+export const ContentInfoProductOperation = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: ${({ theme }) => theme.spacing.padding_container_default};
 
   > section {
     max-width: ${({ theme }) => theme.spacing.max_width};
@@ -58,8 +70,6 @@ export const ContentBenefits = styled.div`
   padding: 8rem 2rem;
 
   > section {
-    max-width: ${({ theme }) => theme.spacing.max_width};
-    margin: 0 auto;
     text-align: center;
 
     > h2 {
@@ -91,9 +101,6 @@ export const ContentUsersFeedbacks = styled.div`
   padding: ${({ theme }) => theme.spacing.padding_container_default};
 
   > section {
-    max-width: ${({ theme }) => theme.spacing.max_width};
-    margin: 0 auto;
-
     h2 {
       color: ${({ theme }) => theme.colors.white};
       font-size: 3.2rem;

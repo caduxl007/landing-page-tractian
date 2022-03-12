@@ -8,6 +8,7 @@ import {
   SectionCardsInfoProductOperation
 } from 'components';
 import Image from 'next/image';
+import { feedbacks_users } from 'utils/mocks/feedbacks-users';
 import * as S from './styles';
 
 export function HomeTemplate() {
@@ -95,39 +96,15 @@ export function HomeTemplate() {
           <h2>O que nossos cliente dizem</h2>
 
           <div>
-            <CardFeedback
-              name="Eduarda Buaiz"
-              image_url="https://imgix.tractian.com/images/eduarda.png?auto=format&fit=max&w=96"
-              feedback="O dispositivo traz mais confiabilidade ao processo, agilizando
-              a análise de informações e evitando paradas na produção, o que
-              impacta positivamente a produtividade."
-              role="Diretora Geral - Indústria Alimentícia"
-            />
-
-            <CardFeedback
-              name="Eduarda Buaiz"
-              image_url="https://imgix.tractian.com/images/eduarda.png?auto=format&fit=max&w=96"
-              feedback="Com a Tractian otimizamos tempo, reduzimos custo com falhas antecipadas pela solução. A tecnologia deles é uma grande ferramenta no acompanhamento e gestão dos nossos ativos que são um dos patrimônios da empresa."
-              role="Diretora Geral - Indústria Alimentícia"
-            />
-
-            <CardFeedback
-              name="Eduarda Buaiz"
-              image_url="https://imgix.tractian.com/images/eduarda.png?auto=format&fit=max&w=96"
-              feedback="O dispositivo traz mais confiabilidade ao processo, agilizando
-              a análise de informações e evitando paradas na produção, o que
-              impacta positivamente a produtividade."
-              role="Diretora Geral - Indústria Alimentícia"
-            />
-
-            <CardFeedback
-              name="Eduarda Buaiz"
-              image_url="https://imgix.tractian.com/images/eduarda.png?auto=format&fit=max&w=96"
-              feedback="O dispositivo traz mais confiabilidade ao processo, agilizando
-              a análise de informações e evitando paradas na produção, o que
-              impacta positivamente a produtividade."
-              role="Diretora Geral - Indústria Alimentícia"
-            />
+            {feedbacks_users.map((data) => (
+              <CardFeedback
+                key={data.id}
+                name={data.name}
+                image_url={data.image_url}
+                feedback={data.feedback}
+                role={data.role}
+              />
+            ))}
           </div>
         </section>
       </S.ContentUsersFeedbacks>

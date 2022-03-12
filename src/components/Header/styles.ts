@@ -23,6 +23,8 @@ export const Container = styled.header`
     nav {
       display: flex;
       gap: 3rem;
+
+      align-items: center;
     }
 
     > div {

@@ -2,9 +2,10 @@ import { Button, NavLink } from 'components';
 import { useTheme } from 'hooks/useTheme';
 import { NavButton } from './NavButton';
 import * as S from './styles';
+import { SwitchButtonTheme } from './SwitchButtonTheme';
 
 export function Header() {
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
 
   // window.addEventListener('scroll', function (event) {
   //   var header = document.getElementById('header');
@@ -37,11 +38,14 @@ export function Header() {
           <NavButton>Sobre Nós</NavButton>
 
           <NavButton>Materiais Gratuitos</NavButton>
+
+          <SwitchButtonTheme />
         </nav>
+
         <div>
           <NavLink href="asd">Área do Cliente</NavLink>
 
-          <Button onClick={toggleTheme}>Demonstração</Button>
+          <Button>Demonstração</Button>
         </div>
       </div>
     </S.Container>

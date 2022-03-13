@@ -38,8 +38,8 @@ export function HomeTemplate() {
             <aside>
               <Image
                 src="/assets/company.svg"
-                height={750}
-                width={750}
+                height={650}
+                width={650}
                 alt="company"
               />
             </aside>

@@ -30,7 +30,7 @@ export const ContentSectionOne = styled.div`
       position: relative;
 
       div {
-        width: 45%;
+        width: 50%;
         h2 {
           font-size: 3.6rem;
         }
@@ -45,6 +45,23 @@ export const ContentSectionOne = styled.div`
         position: absolute;
         top: 0;
         right: 0;
+      }
+
+      @media (max-width: 1000px) {
+        padding: 15rem 3rem 0 3rem;
+        div {
+          width: 70%;
+        }
+
+        aside {
+          position: relative;
+        }
+      }
+
+      @media (max-width: 560px) {
+        div {
+          width: 100%;
+        }
       }
     }
   }
@@ -73,22 +90,12 @@ export const ContentBenefits = styled.div`
     text-align: center;
 
     > h2 {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 400;
-      margin-bottom: 2rem;
-      /* -webkit-box-reflect: below 0
-        linear-gradient(transparent, rgb(0, 0, 0, 0.2)); */
+      margin-bottom: 2rem;/
     }
 
     > div {
-      /* display: flex;
-      flex-wrap: wrap;
-      margin-top: 5rem;
-      gap: 2rem;
-      justify-content: center;
-
-      &. */
-
       display: flex;
       justify-content: center;
       align-items: center;

@@ -11,7 +11,7 @@ export const Container = styled.button`
   color: white;
 
   &:hover {
-    color: #4cf2e2;
+    color: ${({theme}) => theme.colors.turquoise_blue};
   }
 
   /* &:hover::after {

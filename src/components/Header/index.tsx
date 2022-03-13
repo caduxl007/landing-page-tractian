@@ -1,11 +1,12 @@
 import { Button, NavLink } from 'components';
-import { useTheme } from 'hooks/useTheme';
+import { useState } from 'react';
+import { FiList, FiX } from 'react-icons/fi';
 import { NavButton } from './NavButton';
 import * as S from './styles';
 import { SwitchButtonTheme } from './SwitchButtonTheme';
 
 export function Header() {
-  const { toggleTheme, theme } = useTheme();
+  const [activeSidebar, setActiveSidebar] = useState(false);
 
   // window.addEventListener('scroll', function (event) {
   //   var header = document.getElementById('header');
@@ -22,31 +23,32 @@ export function Header() {
 
   return (
     <S.Container id="header">
-      {/* <Image 
-        src="https://imgix.tractian.com/images/Logo-Tractian.svg?auto=format&fit=max&w=256" 
-        alt='Tractian'
-        width={200}
-        height={200}
-        dang
-        /> */}
       <div>
-        <h2>TRACTIAN</h2>
+        <NavLink href="/">TRACTIAN</NavLink>
 
-        <nav>
-          <NavButton>Soluções</NavButton>
+        <S.ContentNav activeSidebar={activeSidebar}>
+          <nav>
+            <NavButton>Soluções</NavButton>
 
-          <NavButton>Sobre Nós</NavButton>
+            <NavButton>Sobre Nós</NavButton>
 
-          <NavButton>Materiais Gratuitos</NavButton>
+            <NavButton>Materiais Gratuitos</NavButton>
 
-          <SwitchButtonTheme />
-        </nav>
+            <SwitchButtonTheme />
+          </nav>
 
-        <div>
-          <NavLink href="asd">Área do Cliente</NavLink>
+          <div>
+            <NavLink href="">Área do Cliente</NavLink>
 
-          <Button>Demonstração</Button>
-        </div>
+            <Button>Demonstração</Button>
+          </div>
+        </S.ContentNav>
+
+        {activeSidebar ? (
+          <FiX size={35} onClick={() => setActiveSidebar(false)} />
+        ) : (
+          <FiList size={35} onClick={() => setActiveSidebar(true)} />
+        )}
       </div>
     </S.Container>
   );

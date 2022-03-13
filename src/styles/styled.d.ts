@@ -12,6 +12,7 @@ declare module 'styled-components' {
       red: string;
       black: string;
       turquoise_blue: string;
+      header_scroll: string;
 
       background_line: string;
 

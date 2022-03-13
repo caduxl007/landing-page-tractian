@@ -1,5 +1,6 @@
 import { Button, NavLink } from 'components';
-import { useState } from 'react';
+import { useTheme } from 'hooks/useTheme';
+import { useEffect, useState } from 'react';
 import { FiList, FiX } from 'react-icons/fi';
 import { NavButton } from './NavButton';
 import * as S from './styles';
@@ -7,19 +8,22 @@ import { SwitchButtonTheme } from './SwitchButtonTheme';
 
 export function Header() {
   const [activeSidebar, setActiveSidebar] = useState(false);
+  const { theme } = useTheme();
 
-  // window.addEventListener('scroll', function (event) {
-  //   var header = document.getElementById('header');
+  useEffect(() => {
+    window.addEventListener('scroll', (event) => {
+      const header = document.getElementById('header');
 
-  //   if (!header) {
-  //     return;
-  //   }
-  //   if (window.pageYOffset > 100) {
-  //     header.style.background = '#007bff';
-  //   } else {
-  //     header.style.background = 'transparent';
-  //   }
-  // });
+      if (!header) {
+        return;
+      }
+      if (window.pageYOffset > 40) {
+        header.style.background = theme.colors.header_scroll;
+      } else {
+        header.style.background = 'transparent';
+      }
+    });
+  }, [theme]);
 
   return (
     <S.Container id="header">

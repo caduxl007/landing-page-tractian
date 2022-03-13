@@ -8,7 +8,6 @@ export function SwitchButtonTheme() {
     <Switch
       width={40}
       height={20}
-      className="teste"
       checkedIcon={false}
       uncheckedIcon={false}
       checked={theme.title === 'light'}

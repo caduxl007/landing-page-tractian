@@ -22,7 +22,7 @@ export function CardInfoProductOperation({
   return (
     <S.Container
       onClick={() => handleSelectCard(number, image_url)}
-      active={number === selected_number}
+      className={number === selected_number ? 'active' : ''}
       {...rest}
     >
       <span>{number}</span>

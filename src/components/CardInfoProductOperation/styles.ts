@@ -1,10 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-interface ContainerProps {
-  active: boolean;
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   max-width: 60rem;
   padding: 2rem;
   border-radius: 8px;
@@ -52,13 +48,11 @@ export const Container = styled.div<ContainerProps>`
     gap: 1rem;
   }
 
-  ${(props) =>
-    props.active &&
-    css`
-      background-color: rgb(255, 255, 255, 0.1);
+  &.active {
+    background-color: rgb(255, 255, 255, 0.1);
 
-      h4 {
-        color: #4cf2e2;
-      }
-    `}
+    h4 {
+      color: #4cf2e2;
+    }
+  }
 `;

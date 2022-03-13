@@ -8,7 +8,11 @@ import {
   SectionCardsInfoProductOperation
 } from 'components';
 import Image from 'next/image';
-import { details_product_software, feedbacks_users } from 'utils/mocks';
+import {
+  benefits_product,
+  details_product_software,
+  feedbacks_users
+} from 'utils/mocks';
 import * as S from './styles';
 
 export function HomeTemplate() {
@@ -70,7 +74,20 @@ export function HomeTemplate() {
             Confira as vantagens de escolher a <b>Tractian</b>!
           </h2>
 
-          <div className="row1">
+          {benefits_product.map((data) => (
+            <div key={data.id} className={`row${data.id}`}>
+              {data.benefits.map((dataBenenif) => (
+                <CardBenefit
+                  key={dataBenenif.id}
+                  title={dataBenenif.title}
+                  text={dataBenenif.text}
+                  className={dataBenenif.class}
+                />
+              ))}
+            </div>
+          ))}
+
+          {/* <div className="row1">
             <CardBenefit
               title="Manutenção Preditiva"
               text="Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos."
@@ -94,7 +111,7 @@ export function HomeTemplate() {
               title="CMMS Integrado"
               text="Automatize processos, ordens de serviço e tenha total controle sobre seus ativos e equipe."
             />
-          </div>
+          </div> */}
         </section>
       </S.ContentBenefits>
 

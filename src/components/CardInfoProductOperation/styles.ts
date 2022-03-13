@@ -7,8 +7,8 @@ export const Container = styled.div`
   cursor: pointer;
 
   display: flex;
-  border-right: 2px solid ${({theme}) => theme.colors.turquoise_blue};
-  border-left: 2px solid ${({theme}) => theme.colors.turquoise_blue};
+  border-right: 2px solid ${({ theme }) => theme.colors.turquoise_blue};
+  border-left: 2px solid ${({ theme }) => theme.colors.turquoise_blue};
 
   gap: 2rem;
 
@@ -16,7 +16,7 @@ export const Container = styled.div`
     background-color: rgb(255, 255, 255, 0.1);
 
     h4 {
-      color: ${({theme}) => theme.colors.turquoise_blue};
+      color: ${({ theme }) => theme.colors.turquoise_blue};
     }
   }
 
@@ -52,7 +52,7 @@ export const Container = styled.div`
     background-color: rgb(255, 255, 255, 0.1);
 
     h4 {
-      color: ${({theme}) => theme.colors.turquoise_blue};
+      color: ${({ theme }) => theme.colors.turquoise_blue};
     }
   }
 `;

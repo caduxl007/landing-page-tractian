@@ -1,5 +1,6 @@
 import { NavLink } from 'components';
 import { useTheme } from 'hooks/useTheme';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { FiList, FiX } from 'react-icons/fi';
 import * as S from './styles';
@@ -8,6 +9,7 @@ import { SwitchButtonTheme } from './SwitchButtonTheme';
 export function Header() {
   const [activeSidebar, setActiveSidebar] = useState(false);
   const { theme } = useTheme();
+  const { asPath } = useRouter();
 
   useEffect(() => {
     window.addEventListener('scroll', (event) => {
@@ -24,6 +26,12 @@ export function Header() {
     });
   }, [theme]);
 
+  useEffect(() => {
+    if (asPath) {
+      setActiveSidebar(false);
+    }
+  }, [asPath]);
+
   return (
     <S.Container id="header">
       <div>
@@ -38,7 +46,6 @@ export function Header() {
             <NavLink href="#feedback">O que dizem?</NavLink>
 
             <NavLink href="#contact">Contato</NavLink>
-
           </nav>
 
           <div>

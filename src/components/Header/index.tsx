@@ -1,8 +1,7 @@
-import { Button, NavLink } from 'components';
+import { NavLink } from 'components';
 import { useTheme } from 'hooks/useTheme';
 import { useEffect, useState } from 'react';
 import { FiList, FiX } from 'react-icons/fi';
-import { NavButton } from './NavButton';
 import * as S from './styles';
 import { SwitchButtonTheme } from './SwitchButtonTheme';
 
@@ -32,19 +31,18 @@ export function Header() {
 
         <S.ContentNav activeSidebar={activeSidebar}>
           <nav>
-            <NavButton>Soluções</NavButton>
+            <NavLink href="#operation">Como funciona?</NavLink>
 
-            <NavButton>Sobre Nós</NavButton>
+            <NavLink href="#benefits">Vantagens</NavLink>
 
-            <NavButton>Materiais Gratuitos</NavButton>
+            <NavLink href="#feedback">O que dizem?</NavLink>
 
-            <SwitchButtonTheme />
+            <NavLink href="#contact">Contato</NavLink>
+
           </nav>
 
           <div>
-            <NavLink href="">Área do Cliente</NavLink>
-
-            <Button>Demonstração</Button>
+            <SwitchButtonTheme />
           </div>
         </S.ContentNav>
 

@@ -16,7 +16,7 @@ export function CardDetailProduct({
 }: CardDetailProductProps) {
   return (
     <S.Container>
-      <Image src={image_url} width={400} height={320} alt={title} />
+      <Image src={image_url} width={500} height={300} alt={title} />
 
       <div>
         <h2>{title}</h2>

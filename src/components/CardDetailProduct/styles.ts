@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 50rem;
+  max-width: 40rem;
   width: 100%;
   display: flex;
   gap: 2rem;
@@ -31,7 +31,7 @@ export const Container = styled.div`
 
     p {
       margin-top: 2rem;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 `;

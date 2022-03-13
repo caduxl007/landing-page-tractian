@@ -1,5 +1,4 @@
 import {
-  Button,
   CardBenefit,
   CardDetailProduct,
   CardFeedback,
@@ -29,12 +28,10 @@ export function HomeTemplate() {
                 uma coisa do passado com sistema preditivo da TRACTIAN.
               </p>
 
-              <Button>Demonstração</Button>
-
               <p>
-                Já é cliente?{' '}
+                Tem interesse?{' '}
                 <b>
-                  <NavLink href="">Acesse aqui</NavLink>
+                  <NavLink href="#contact">Entre em contato!</NavLink>
                 </b>
               </p>
             </div>
@@ -64,11 +61,11 @@ export function HomeTemplate() {
         </section>
       </S.ContentSectionTwo>
 
-      <S.ContentInfoProductOperation>
+      <S.ContentInfoProductOperation id="operation">
         <SectionCardsInfoProductOperation />
       </S.ContentInfoProductOperation>
 
-      <S.ContentBenefits>
+      <S.ContentBenefits id="benefits">
         <section>
           <h2>
             Confira as vantagens de escolher a <b>Tractian</b>!
@@ -89,7 +86,7 @@ export function HomeTemplate() {
         </section>
       </S.ContentBenefits>
 
-      <S.ContentUsersFeedbacks>
+      <S.ContentUsersFeedbacks id="feedback">
         <section>
           <h2>O que nossos cliente dizem</h2>
 
@@ -107,7 +104,7 @@ export function HomeTemplate() {
         </section>
       </S.ContentUsersFeedbacks>
 
-      <S.ContentForm>
+      <S.ContentForm id="contact">
         <FormContact />
       </S.ContentForm>
     </S.Container>

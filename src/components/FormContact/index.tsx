@@ -43,7 +43,7 @@ export function FormContact() {
   return (
     <S.Container>
       <h2>Melhore os seus processos de manutenção</h2>
-      <p>Preencha o formulário para uma demonstração.</p>
+      <p>Preencha o formulário para entrar em contato!</p>
 
       <Form ref={formRef} onSubmit={handleSubmitForm}>
         <Input name="name" label="Nome" placeholder="Insira seu nome" />

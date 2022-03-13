@@ -13,20 +13,22 @@ export const Container = styled.footer`
 
 export const ContentNav = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: space-around;
+  gap: 7rem;
 
   > div {
+    text-align: center;
     h4 {
       color: ${({ theme }) => theme.colors.secundary};
       font-size: 1.8rem;
       text-transform: uppercase;
     }
 
-    > nav {
+    > div {
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
       gap: 1rem;
       margin-top: 2rem;
     }

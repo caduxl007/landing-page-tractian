@@ -1,5 +1,5 @@
-import { NavLink } from 'components/NavLink';
-import { redes_socials } from 'utils/mocks';
+import Image from 'next/image';
+import { link_image_investors, link_image_recognition, redes_socials } from 'utils/mocks';
 import { NavLinkImage } from './NavLinkImage';
 import * as S from './styles';
 
@@ -9,43 +9,33 @@ export function Footer() {
       <div>
         <S.ContentNav>
           <div>
-            <h4>Navegação</h4>
-            <nav>
-              <NavLink href="">Sensor Tractian</NavLink>
-              <NavLink href="">Plataforma</NavLink>
-              <NavLink href="">Funcionalidades</NavLink>
-              <NavLink href="">Planos e preços</NavLink>
-            </nav>
+            <h4>Investidores</h4>
+            <div>
+              {link_image_investors.map((data) => (
+                <Image
+                  src={data.image_url}
+                  key={data.id}
+                  alt={data.name}
+                  width={140}
+                  height={60}
+                />
+              ))}
+            </div>
           </div>
 
           <div>
-            <h4>Navegação</h4>
-            <nav>
-              <NavLink href="">Sensor Tractian</NavLink>
-              <NavLink href="">Plataforma</NavLink>
-              <NavLink href="">Funcionalidades</NavLink>
-              <NavLink href="">Planos e preços</NavLink>
-            </nav>
-          </div>
-
-          <div>
-            <h4>Navegação</h4>
-            <nav>
-              <NavLink href="">Sensor Tractian</NavLink>
-              <NavLink href="">Plataforma</NavLink>
-              <NavLink href="">Funcionalidades</NavLink>
-              <NavLink href="">Planos e preços</NavLink>
-            </nav>
-          </div>
-
-          <div>
-            <h4>Navegação</h4>
-            <nav>
-              <NavLink href="">Sensor Tractian</NavLink>
-              <NavLink href="">Plataforma</NavLink>
-              <NavLink href="">Funcionalidades</NavLink>
-              <NavLink href="">Planos e preços</NavLink>
-            </nav>
+            <h4>Reconhecimento</h4>
+            <div>
+              {link_image_recognition.map((data) => (
+                <Image
+                  src={data.image_url}
+                  key={data.id}
+                  alt={data.name}
+                  width={80}
+                  height={80}
+                />
+              ))}
+            </div>
           </div>
         </S.ContentNav>
 

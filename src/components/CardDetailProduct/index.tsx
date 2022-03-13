@@ -1,28 +1,27 @@
 import Image from 'next/image';
-
 import * as S from './styles';
 
 //TO-DO: Aplicar efeito espelho
 
-export function CardDetailProduct() {
+interface CardDetailProductProps {
+  title: string;
+  image_url: string;
+  text: string;
+}
+
+export function CardDetailProduct({
+  title,
+  image_url,
+  text,
+}: CardDetailProductProps) {
   return (
     <S.Container>
-      <header>
-        <h2>Software de Manutenção TracOS™</h2>
-      </header>
+      <Image src={image_url} width={400} height={320} alt={title} />
 
       <div>
-        <Image
-          src="https://imgix.tractian.com/trac-os/cmms-presentation.png?auto=format&fit=max&w=640"
-          width={400}
-          height={320}
-          alt="Software"
-        />
+        <h2>{title}</h2>
 
-        <p>
-          O CMMS revolucionário para planejar, acompanhar métricas e conectar-se
-          com sua equipe.
-        </p>
+        <p>{text}</p>
       </div>
     </S.Container>
   );

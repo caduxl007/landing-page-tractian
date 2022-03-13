@@ -8,7 +8,7 @@ import {
   SectionCardsInfoProductOperation
 } from 'components';
 import Image from 'next/image';
-import { feedbacks_users } from 'utils/mocks/feedbacks-users';
+import { details_product_software, feedbacks_users } from 'utils/mocks';
 import * as S from './styles';
 
 export function HomeTemplate() {
@@ -49,7 +49,14 @@ export function HomeTemplate() {
 
       <S.ContentSectionTwo>
         <section>
-          <CardDetailProduct />
+          {details_product_software.map((data) => (
+            <CardDetailProduct
+              key={data.id}
+              text={data.text}
+              title={data.title}
+              image_url={data.image_url}
+            />
+          ))}
         </section>
       </S.ContentSectionTwo>
 

@@ -70,6 +70,15 @@ export const ContentSectionOne = styled.div`
 export const ContentSectionTwo = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.spacing.padding_container_default};
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    max-width: ${({ theme }) => theme.spacing.max_width};
+    margin: 0 auto;
+  }
 `;
 
 export const ContentInfoProductOperation = styled.div`

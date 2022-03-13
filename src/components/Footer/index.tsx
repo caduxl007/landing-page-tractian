@@ -1,4 +1,5 @@
 import { NavLink } from 'components/NavLink';
+import { redes_socials } from 'utils/mocks';
 import { NavLinkImage } from './NavLinkImage';
 import * as S from './styles';
 
@@ -52,29 +53,14 @@ export function Footer() {
           <p>© Tractian Tecnologia Ltda CNPJ: 35.755.699/0001-84</p>
 
           <div>
-            <NavLinkImage
-              href="https://www.linkedin.com/company/tractian/"
-              image_url="https://imgix.tractian.com/images/linkedin.png?auto=format&fit=max&w=32"
-              alt="Linkedln"
-            />
-
-            <NavLinkImage
-              href="https://www.facebook.com/tractian"
-              image_url="https://imgix.tractian.com/images/facebook.png?auto=format&fit=max&w=32"
-              alt="Facebook"
-            />
-
-            <NavLinkImage
-              href="https://www.instagram.com/tractian/"
-              image_url="https://imgix.tractian.com/images/instagram.png?auto=format&fit=max&w=32"
-              alt="Instagram"
-            />
-
-            <NavLinkImage
-              href="https://www.youtube.com/c/TRACTIAN"
-              image_url="https://imgix.tractian.com/images/youtube.png?auto=format&fit=max&w=32"
-              alt="Youtube"
-            />
+            {redes_socials.map((data) => (
+              <NavLinkImage
+                key={data.id}
+                href={data.url}
+                image_url={data.image_url}
+                alt={data.name}
+              />
+            ))}
           </div>
         </S.FooterInfo>
       </div>

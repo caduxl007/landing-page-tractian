@@ -7,11 +7,11 @@ export const Container = styled.div`
 
   span {
     pointer-events: none;
-    width: 160px;
-    background: #c53030;
-    padding: 8px;
+    width: 16rem;
+    background: ${({ theme }) => theme.colors.red};
+    padding: 0.8rem;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
@@ -23,21 +23,20 @@ export const Container = styled.div`
     left: -40%;
     transform: translateX(-50%);
 
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.white};
     cursor: text;
 
     @media (min-width: 768px) {
       left: 50%;
     }
 
-    /* Fazer a FLEXA */
     &::before {
       pointer-events: visible;
       content: '';
       border-style: solid;
-      border-color: #c53030 transparent;
+      border-color: ${({ theme }) => theme.colors.red} transparent;
       border-width: 6px 6px 0 6px;
-      bottom: 20px;
+      bottom: 2rem;
       top: 100%;
       position: absolute;
       left: 62%;

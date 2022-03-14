@@ -1,5 +1,4 @@
 import { ReactElement, ReactNode } from 'react';
-
 import { Container } from './styles';
 
 interface TooltipProps {
@@ -8,7 +7,7 @@ interface TooltipProps {
   children?: ReactNode;
 }
 
-function Tooltip({
+export function Tooltip({
   title,
   className = '',
   children,
@@ -20,5 +19,3 @@ function Tooltip({
     </Container>
   );
 }
-
-export default Tooltip;

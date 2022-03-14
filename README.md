@@ -1,5 +1,5 @@
 <h1 align="center">Tractian</h1>
-<p align="center">Desenvolvendo uma lading page pro site da [Tractian](https://tractian.com/).</p>
+<p align="center">Desenvolvendo uma lading page pro site da  <a href="https://tractian.com/">Tractian</a>.</p>
 
 
 ### 🛠 Tecnologias

@@ -1,5 +1,5 @@
 <h1 align="center">Tractian</h1>
-<p align="center">Desenvolvendo uma lading page pro site da Tractian.</p>
+<p align="center">Desenvolvendo uma lading page pro site da [Tractian](https://tractian.com/).</p>
 
 
 ### 🛠 Tecnologias
@@ -17,6 +17,7 @@ As seguintes funcionalidades foram implementadas:
 
 - Dark Mode
 - PWA
+- Responsividade
 
 Aplicação deployada:
 

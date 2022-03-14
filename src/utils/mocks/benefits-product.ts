@@ -15,8 +15,8 @@ export const benefits_product = [
       },
       {
         id: 3,
-        title: 'Manutenção Preditiva',
-        text: 'Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos.',
+        title: 'Setup Instantâneo',
+        text: 'Solução Plug & Play, sem necessidade de WiFi industrial, comunicação via 3G/4G independente.',
         class: 'box-down',
       },
     ],
@@ -26,8 +26,8 @@ export const benefits_product = [
     benefits: [
       {
         id: 4,
-        title: 'Manutenção Preditiva',
-        text: 'Detecção automática de falhas, saúde do ativo em tempo real, confiabilidade e insights automáticos.',
+        title: 'CMMS Integrado',
+        text: 'Automatize processos, ordens de serviço e tenha total controle sobre seus ativos e equipe.',
       },
     ],
   },

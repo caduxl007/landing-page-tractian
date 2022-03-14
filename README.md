@@ -1,5 +1,5 @@
 <h1 align="center">Tractian</h1>
-<p align="center">Desenvolvendo uma lading page pro site da  <a href="https://tractian.com/">Tractian</a>.</p>
+<p align="center">Desenvolvendo uma landing page pro site da  <a href="https://tractian.com/">Tractian</a>.</p>
 
 
 ### 🛠 Tecnologias
@@ -24,7 +24,7 @@ As seguintes funcionalidades foram implementadas:
 
 ## 🖥 Deploy da aplicação:
 
-- [lading-page-tractian](https://lading-page-tractian-caduxl007.vercel.app/)
+- [landing-page-tractian](https://lading-page-tractian-caduxl007.vercel.app/)
 
 <h1>📱 Como usar? </h1> 
 

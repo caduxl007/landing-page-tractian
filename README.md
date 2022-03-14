@@ -22,6 +22,8 @@ As seguintes funcionalidades foram implementadas:
 - Responsividade
 - Testes unitários
 
+## 🖥 Deploy da aplicação:
+
 - [lading-page-tractian](https://lading-page-tractian-caduxl007.vercel.app/)
 
 <h1>📱 Como usar? </h1> 

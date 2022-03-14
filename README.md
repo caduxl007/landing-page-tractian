@@ -17,10 +17,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 As seguintes funcionalidades foram implementadas:
 
-[x] Dark Mode
-[x] PWA
-[x] Responsividade
-[x] Testes unitários
+- [x] Dark Mode
+- [x] PWA
+- [x] Responsividade
+- [x] Testes unitários
 
 ## 🖥 Deploy da aplicação:
 

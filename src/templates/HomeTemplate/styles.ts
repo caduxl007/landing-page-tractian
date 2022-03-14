@@ -116,6 +116,30 @@ export const ContentBenefits = styled.div`
   }
 `;
 
+export const ContentCardsDetailsSafe = styled.div`
+  background-color: ${({ theme }) => theme.colors.secundary};
+  padding: ${({ theme }) => theme.spacing.padding_container_default};
+
+  > section {
+    h2 {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 400;
+      color: ${({ theme }) => theme.colors.white};
+    }
+
+    > div {
+      margin-top: 5rem;
+
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-around;
+    }
+  }
+`;
+
 export const ContentUsersFeedbacks = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   padding: ${({ theme }) => theme.spacing.padding_container_default};

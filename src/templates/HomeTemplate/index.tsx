@@ -1,6 +1,7 @@
 import {
   CardBenefit,
   CardDetailProduct,
+  CardDetailSafe,
   CardFeedback,
   FormContact,
   NavLink,
@@ -10,6 +11,7 @@ import Image from 'next/image';
 import {
   benefits_product,
   details_product_software,
+  details_safe,
   feedbacks_users
 } from 'utils/mocks';
 import * as S from './styles';
@@ -85,6 +87,22 @@ export function HomeTemplate() {
           ))}
         </section>
       </S.ContentBenefits>
+
+      <S.ContentCardsDetailsSafe>
+        <section>
+          <h2>Suas máquinas mais seguras</h2>
+
+          <div>
+            {details_safe.map((data) => (
+              <CardDetailSafe
+                key={data.id}
+                title={data.title}
+                text={data.text}
+              />
+            ))}
+          </div>
+        </section>
+      </S.ContentCardsDetailsSafe>
 
       <S.ContentUsersFeedbacks id="feedback">
         <section>

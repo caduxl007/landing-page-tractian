@@ -1,0 +1,21 @@
+{
+  "name": "Tractian",
+  "short_name": "Tractian",
+  "icons": [
+    {
+      "src": "https://tractian.com/tractian-favicon-ia.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://tractian.com/tractian-favicon-ia.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#024083",
+  "description": "A simples landing page",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#024083"
+}

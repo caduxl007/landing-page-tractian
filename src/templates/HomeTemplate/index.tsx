@@ -106,7 +106,7 @@ export function HomeTemplate() {
 
       <S.ContentUsersFeedbacks id="feedback">
         <section>
-          <h2>O que nossos cliente dizem</h2>
+          <h2>O que nossos clientes dizem</h2>
 
           <div>
             {feedbacks_users.map((data) => (

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   -ms-transform: skew(-7deg);
   -webkit-transform: skew(-7deg);
-  background-color: #eee;
+  background-color: ${({ theme }) => theme.colors.medium_white};
   border-radius: 14px;
   border-right: 4px solid ${({ theme }) => theme.colors.secundary};
   display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.div`
   i,
   p {
     font-size: 1.4rem;
-    color: #444;
+    color: ${({ theme }) => theme.colors.medium_gray};
   }
 
   > footer {

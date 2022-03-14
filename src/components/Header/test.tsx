@@ -13,12 +13,24 @@ jest.mock('hooks/useTheme', () => {
   };
 });
 
+jest.mock('next/router', () => {
+  return {
+    useRouter() {
+      return {
+        asPath: '/',
+      };
+    },
+  };
+});
+
 describe('Header component', () => {
   it('renders correctly', () => {
     renderTheme(<Header />);
 
     expect(screen.getByText('TRACTIAN')).toBeInTheDocument();
-    expect(screen.getByText('Área do Cliente')).toBeInTheDocument();
-    expect(screen.getByText('Demonstração')).toBeInTheDocument();
+    expect(screen.getByText('Como funciona?')).toBeInTheDocument();
+    expect(screen.getByText('Vantagens')).toBeInTheDocument();
+    expect(screen.getByText('O que dizem?')).toBeInTheDocument();
+    expect(screen.getByText('Contato')).toBeInTheDocument();
   });
 });

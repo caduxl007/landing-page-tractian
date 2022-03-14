@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import * as S from './styles';
 
-//TO-DO: Aplicar efeito espelho
-
 interface CardDetailProductProps {
   title: string;
   image_url: string;

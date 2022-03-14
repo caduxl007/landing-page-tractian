@@ -92,7 +92,7 @@ export const ContentInfoProductOperation = styled.div`
 `;
 
 export const ContentBenefits = styled.div`
-  background-color: #eee;
+  background-color: ${({ theme }) => theme.colors.medium_white};
   padding: 8rem 2rem;
 
   > section {

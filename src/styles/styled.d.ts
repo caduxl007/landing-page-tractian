@@ -6,6 +6,7 @@ declare module 'styled-components' {
 
     colors: {
       white: string;
+      medium_white: string;
       primary: string;
       secundary: string;
       green: string;
@@ -13,14 +14,9 @@ declare module 'styled-components' {
       black: string;
       turquoise_blue: string;
       header_scroll: string;
+      medium_gray: string;
+      box_shadow: string;
 
-      background_line: string;
-
-      background_primary: string;
-      background_secundary: string;
-      background_tertiary: string;
-      background_icon: string;
-      background_hover: string;
       text: string;
     };
 

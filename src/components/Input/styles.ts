@@ -74,7 +74,7 @@ export const Error = styled(Tooltip)`
 
   span {
     background: ${({ theme }) => theme.colors.red};
-    color: #fff;
+    color: ${({ theme }) => theme.colors.white};
 
     &::before {
       border-color: ${({ theme }) => theme.colors.red} transparent;

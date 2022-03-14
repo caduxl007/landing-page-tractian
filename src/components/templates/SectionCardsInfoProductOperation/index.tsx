@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {
   management,
   monitoring
-} from 'utils/mocks/details-info-product-operation';
+} from 'utils/mocks';
 import * as S from './styles';
 
 export function SectionCardsInfoProductOperation() {

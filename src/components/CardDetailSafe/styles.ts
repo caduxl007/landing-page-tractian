@@ -4,8 +4,8 @@ export const Container = styled.div`
   text-align: center;
   max-width: 40rem;
   padding: 3rem 5rem;
-  border-right: 2px dotted white;
-  border-left: 2px dotted white;
+  border-right: 2px dotted ${({ theme }) => theme.colors.white};
+  border-left: 2px dotted ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.white};
 
   h1 {

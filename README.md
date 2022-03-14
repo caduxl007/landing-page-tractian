@@ -10,6 +10,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeScript](https://www.typescriptlang.org/) 
 - [Styled-components](https://styled-components.com/)
 - [Vercel](https://vercel.com/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## 👀 Features
 
@@ -18,8 +20,7 @@ As seguintes funcionalidades foram implementadas:
 - Dark Mode
 - PWA
 - Responsividade
-
-Aplicação deployada:
+- Testes unitários
 
 - [lading-page-tractian](https://lading-page-tractian-caduxl007.vercel.app/)
 
@@ -47,4 +48,13 @@ $ yarn
 $ yarn dev
 
 ## Prontinho você terá acesso a aplicação!!! 
+```
+
+### 🚀 Rodando os testes
+
+```bash
+# Para executar os testes:
+$ yarn jest
+
+## Prontinho você terá acesso aos testes!!! 
 ```
